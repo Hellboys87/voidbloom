@@ -94,13 +94,14 @@ function playForward(state, maxSteps, until, stopAtDraft = false) {
 
 /**
  * Build the named scene and return the state to render. 'start' is the title over the quiet
- * garden; 'play' is mid-wave-3 combat; 'upgrade' is the first draft; 'end' is the victory.
+ * garden; 'play' is mid-wave-5 combat (spitters and a brute join by then); 'upgrade' is the
+ * first draft; 'end' is the victory.
  */
 export function stageShot(name, seed) {
   const state = createState(seed);
   if (name === 'play') {
     startRun(state);
-    playForward(state, 60 * 150, (s) => s.wave >= 3 && s.enemies.length >= 4 && s.bolts.length >= 1);
+    playForward(state, 60 * 240, (s) => s.wave >= 5 && s.banner === null && s.enemies.length >= 6 && s.bolts.length >= 2 && s.pickups.length >= 2);
     return state;
   }
   if (name === 'upgrade') {

@@ -37,7 +37,11 @@ export function createRenderer(canvas) {
     drawPickups(state);
     drawOrbs(state);
     drawEnemies(state);
-    if (state.screen !== SCREEN.OVER) drawPlayer(state);
+    // The ship is drawn only while a run is live or paused over one: on the title and end
+    // screens it would sit on top of the text the player is meant to read.
+    if (state.screen === SCREEN.PLAY || state.screen === SCREEN.DRAFT || state.screen === SCREEN.PAUSED) {
+      drawPlayer(state);
+    }
     drawBolts(state);
     drawParticles(state);
     drawTexts(state);
@@ -498,6 +502,10 @@ export function createRenderer(canvas) {
       CX,
       262,
     );
+
+    // A soft panel behind the numbers so they stay readable over the bloomed garden.
+    ctx.fillStyle = 'rgba(5,4,16,0.55)';
+    ctx.fillRect(CX - 330, 296, 660, 262);
 
     const stats = [
       ['SCORE', String(state.score)],
