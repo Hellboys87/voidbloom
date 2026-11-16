@@ -1,5 +1,9 @@
 # VOIDBLOOM
 
+[![make.fun · best-game-01](https://make.fun/badge/best-game-01.svg)](https://make.fun/bounty/best-game-01?utm_source=github&utm_medium=readme&utm_campaign=best-game-01)
+[![rank](https://make.fun/badge/best-game-01/Hellboys87/voidbloom/rank.svg)](https://make.fun/bounty/best-game-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=best-game-01)
+[![reward](https://make.fun/badge/best-game-01/Hellboys87/voidbloom/reward.svg)](https://make.fun/bounty/best-game-01?utm_source=github&utm_medium=readme&utm_campaign=best-game-01)
+
 **Defend the last garden in the void.** You are the Bloomkeeper, a small seed-ship holding a
 single flowering garden against ten waves of void spores. Gather the gold light shards the
 fallen drop, take a blessing after every wave, and on the final wave destroy the
